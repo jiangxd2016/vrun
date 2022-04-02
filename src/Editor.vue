@@ -7,9 +7,6 @@ import type Store from "./store";
 
 const store = inject("store") as Store;
 
-// eslint-disable-next-line no-console
-console.log(store);
-
 const onChange = debounce((code: string) => {
   store.state.file.code = code;
 }, 150);

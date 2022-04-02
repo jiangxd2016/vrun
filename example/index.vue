@@ -1,5 +1,23 @@
 <template>
   <div class="vue-run">
+    <div class="Example">
+      <span>Example</span>
+
+      <span class="right">
+        <IconVerticalVIew
+          v-if="layout === 'vertical'"
+          @click="layout = 'horizontal'"
+        ></IconVerticalVIew>
+        <IconHorizontalView
+          v-if="layout === 'horizontal'"
+          @click="layout = 'vertical'"
+        ></IconHorizontalView>
+        <IconOpenPanelLeft></IconOpenPanelLeft>
+        <IconOpenPanelRight></IconOpenPanelRight>
+        <IconReset></IconReset>
+      </span>
+    </div>
+
     <SplitPane :layout="layout">
       <template #right>
         <Editor />
@@ -18,6 +36,11 @@ import SplitPane from "./layout/SplitPane.vue";
 import Editor from "./components/editor/Editor.vue";
 import Preview from "./components/preview/preview.vue";
 import Store from "./store";
+import IconVerticalVIew from '~icons/carbon/vertical-view'
+import IconHorizontalView from '~icons/carbon/horizontal-view'
+import IconOpenPanelLeft from "~icons/carbon/open-panel-filled-left"
+import IconOpenPanelRight from "~icons/carbon/open-panel-filled-right"
+import IconReset from '~icons/carbon/reset'
 interface globalProps {
   store?: Store;
   readonly?: boolean;

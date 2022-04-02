@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["@ventjs/eslint-config"],
+  extends: ["@estjs/eslint-config"],
 };

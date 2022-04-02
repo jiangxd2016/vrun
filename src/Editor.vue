@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { inject } from "vue";
-import CodeMirror from "../codemirror/CodeMirror.vue";
-import Message from "../../layout/Message.vue";
-import { debounce } from "../../utils";
-import type Store from "../../store";
+import CodeMirror from "./codemirror/CodeMirror.vue";
+import Message from "./message.vue";
+import { debounce } from "./utils";
+import type Store from "./store";
 
 const store = inject("store") as Store;
 

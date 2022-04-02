@@ -14,9 +14,9 @@
 
 <script lang="ts" setup>
 import { provide } from "vue";
-import SplitPane from "./layout/SplitPane.vue";
-import Editor from "./components/editor/Editor.vue";
-import Preview from "./components/preview/preview.vue";
+import SplitPane from "./splitPane.vue";
+import Editor from "./editor.vue";
+import Preview from "./preview.vue";
 import Store from "./store";
 interface globalProps {
   store?: Store;
@@ -91,5 +91,13 @@ provide("store", props.store);
   font-weight: 500;
   line-height: 1;
   border-bottom: 1px solid var(--border);
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  background-color: transparent;
 }
 </style>

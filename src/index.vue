@@ -14,9 +14,9 @@
 
 <script lang="ts" setup>
 import { provide } from "vue";
-import SplitPane from "./splitPane.vue";
-import Editor from "./editor.vue";
-import Preview from "./preview.vue";
+import SplitPane from "./SplitPane.vue";
+import Editor from "./Editor.vue";
+import Preview from "./Preview.vue";
 import Store from "./store";
 interface globalProps {
   store?: Store;
